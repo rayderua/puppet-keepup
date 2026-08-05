@@ -23,6 +23,7 @@ class keepup::params {
     'version_id'       => $facts['os']['distro']['release']['major'],
     'host_ip'          => $facts['networking']['hostname'],
     'data_center'      => 'unknown',
+    'team'             => 'unknown',
   }
 
   $package_defaults = {
@@ -36,6 +37,7 @@ class keepup::params {
     'postgresql'       => $facts['package_versions']['postgresql']['version'],
     'elasticsearch'    => $facts['package_versions']['elasticsearch']['version'],
     'php'              => $facts['package_versions']['php']['version'],
+    'linux'            => $facts['package_versions']['linux']['version'],
   }
 
   $info = {}
