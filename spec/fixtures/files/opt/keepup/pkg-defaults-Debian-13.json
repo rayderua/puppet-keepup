@@ -1,6 +1,6 @@
 {
   "packages": {
-    "debian": "13,
+    "debian": "13",
     "mongodb": "0.0.0",
     "redis": "0.0.0",
     "mysql": "0.0.0",
