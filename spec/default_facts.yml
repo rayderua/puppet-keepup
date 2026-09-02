@@ -7,3 +7,25 @@ networking:
   ip6: "FE80:0000:0000:0000:AAAA:AAAA:AAAA"
   mac: "AA:AA:AA:AA:AA:AA"
 is_pe: false
+         
+package_versions:
+  mongodb:
+    version: 0.0.0
+  redis:
+    version: 0.0.0
+  mysql:
+    version: 0.0.0
+  rabbitmq:
+    version: 0.0.0
+  memcached:
+    version: 0.0.0
+  envoy:
+    version: 0.0.0
+  postgresql:
+    version: 0.0.0
+  elasticsearch:
+    version: 0.0.0
+  php:
+    version: 0.0.0
+  linux:
+    version: 0.0.0

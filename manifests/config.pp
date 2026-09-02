@@ -70,14 +70,14 @@ class keepup::config {
     # lint:endignore
     $systemd_calendar = "*-*-* 00/3:${persistent_random_minute}:00"
 
+    exec { 'keepup-systemd-daemon-reload':
+      command     => '/bin/systemctl daemon-reload',
+      refreshonly => true,
+    }
+
     if $systemd_timer {
       file { '/etc/cron.d/keepup':
         ensure => absent,
-      }
-
-      exec { 'keepup-systemd-daemon-reload':
-        command     => '/bin/systemctl daemon-reload',
-        refreshonly => true,
       }
 
       file { '/etc/systemd/system/keepup.service':
@@ -122,11 +122,6 @@ class keepup::config {
       exec { 'keepup-systemd-disable-timer':
         command => '/bin/systemctl disable --now keepup.timer',
         onlyif  => '/bin/systemctl list-unit-files keepup.timer --no-legend | /bin/grep -q "^keepup.timer"',
-      }
-
-      exec { 'keepup-systemd-daemon-reload':
-        command     => '/bin/systemctl daemon-reload',
-        refreshonly => true,
       }
 
       file { ['/etc/systemd/system/keepup.service', '/etc/systemd/system/keepup.timer']:
