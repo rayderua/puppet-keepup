@@ -1,6 +1,6 @@
 {
   "name": "codetool-keepup",
-  "version": "1.5.1",
+  "version": "1.4.4",
   "author": "code_tool",
   "summary": "Installs and configures keepup - a package version monitoring agent",
   "license": "MIT",
